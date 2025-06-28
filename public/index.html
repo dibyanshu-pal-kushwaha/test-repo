@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+        <script> function reqbody(){
+            const a = document.querySelector("#a").value;
+            const b = document.querySelector("#b").value;
+            axios.post("http://localhost:3000/sum",{
+                a: a,
+                b: b
+            })
+        }
+
+        </script>
+
+
+    </head>
+   
+    <body>
+        <input id ="a" type="text" placeholder="First NUmber :">
+        </input>
+        <input id ="b" type="text" placeholder="Second NUmber :">
+        </input>
+        <button onclick="reqbody() ">Get Sum</button>
+    </body>
+</html>
